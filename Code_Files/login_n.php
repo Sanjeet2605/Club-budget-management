@@ -161,8 +161,8 @@ session_start();
     $password = $_SESSION["password"];
 
         $conn = new mysqli('localhost','root','','robotronics');
-        $sql = "INSERT INTO `login`(`name`, `email`, `password`, `role`) 
-        VALUES ('$Name','$email','$password','$role')";
+        $sql = "INSERT INTO `login`(`name`, `password`, `role`) 
+        VALUES ('$Name','$password','$role')";
 
         if (mysqli_query($conn, $sql)) {
             echo "<h2 style='color:green'>Registration successful</h2>" ;
